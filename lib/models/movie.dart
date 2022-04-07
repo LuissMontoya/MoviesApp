@@ -40,6 +40,13 @@ class Movie {
     return 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-LIuw85eKZxCJ2cIWs0bAmdWbdlMbPBtoKR6PLl8VjMUelxkCEtB7IHm9j4Vy_xEYAr4&usqp=CAU';
   }
 
+  get fullBackdropPath {
+    if (this.posterPath != null)
+      return 'https://image.tmdb.org/t/p/w500${this.backdropPath}';
+
+    return 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-LIuw85eKZxCJ2cIWs0bAmdWbdlMbPBtoKR6PLl8VjMUelxkCEtB7IHm9j4Vy_xEYAr4&usqp=CAU';
+  }
+
   factory Movie.fromJson(String str) => Movie.fromMap(json.decode(str));
 
   factory Movie.fromMap(Map<String, dynamic> json) => Movie(
