@@ -41,7 +41,7 @@ class Movie {
   }
 
   get fullBackdropPath {
-    if (this.posterPath != null)
+    if (this.backdropPath != null)
       return 'https://image.tmdb.org/t/p/w500${this.backdropPath}';
 
     return 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-LIuw85eKZxCJ2cIWs0bAmdWbdlMbPBtoKR6PLl8VjMUelxkCEtB7IHm9j4Vy_xEYAr4&usqp=CAU';
